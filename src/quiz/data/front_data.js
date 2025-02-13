@@ -89,7 +89,7 @@ export const frontTechnologyData = [
     },
     {
         question: "브라우저 저장소(LocalStorage, SessionStorage, Cookie)의 차이점",
-        answer: "LocalStorage = 영구적으로 보관 가능(자동 로그인) \n\n SessionStorage = 세션 종료시 삭제(비로그인 활동) \n\n Cookie = 사용자 정보를 저장 및 세션 관리(팝업 창)"
+        answer: "LocalStorage = 영구적으로 보관 가능(자동 로그인) \n\n SessionStorage = 브라우저 종료시 삭제(비로그인 활동) \n\n Cookie = 만료일 설정 시 유지, 브라우저 종료시 삭제(팝업 창)"
     },
     {
         question: "null, undefined, undeclared, NaN 개념",
@@ -163,19 +163,19 @@ export const frontTechnologyCssData = [
     },
     {
         question: "BFC(Block Formatting Context)와 동작원리",
-        answer: "요소들이 어떻게 배치되고 정렬되는지 결정하는 영역으로,\n외부와 겹치지 않도록 배치한다.\n(자식 요소 배치, 마진 병합, 플로트 요소 처리)"
+        answer: "요소들이 어떻게 배치되고 정렬되는지 결정하는 영역으로,\n외부와 겹치지 않도록 배치한다.\noverflow: hidden, float, display 속성을 사용하면 BFC가 동작"
     },
     {
         question: "브라우저 별 스타일링 문제를 해결하는 방식",
         answer: "각 부라우저 별 CSS를 해석하고, 렌더링하는 방식이 다르다.\nCSS 리셋(normalize.css or reset.css / 일관된 스타일로 시작)\n벤더 프리픽스(-webkit-, -moz-, -ms- / 호환성 문제 해결)"
     },
     {
-        question: "CSS 전처리기를 사용하는 장단점",
-        answer: "코드의 유지보수성과 효율성을 높이는 장점이 있지만,\n빌드 과정이 필요하고 디버깅에 어려움이 있는 단점이 있다."
+        question: "CSS 전처리기(SCSS)를 사용하는 장단점",
+        answer: "코드의 재사용성과 유지보수성을 높이는 장점이 있지만,\n빌드 과정이 필요한 단점이 있다.\n\n빌드 과정) Sass를 설치 - scss파일 생성 - 코드 작성 - \nsass 파일 명.scss 파일 명.css 입력"
     },
     {
-        question: "브라우저가 CSS 선택자와 일치하는 요소를 어떻게 결정하는가?",
-        answer: "DOM 트리에서 모든 요소를 탐색하여,\n 우선순위에 따라 일치 여부를 결정하고 적용"
+        question: "브라우저가 CSS 선택자와 일치하는 요소를 어떻게\n 결정하는가?",
+        answer: "CSSOM 트리에서 스타일 규칙을 탐색하여,\n 우선순위에 따라 DOM에 적용"
     },
     {
         question: "가상 요소(pseudo-elements) 선택자의 정의와 용도",
@@ -183,31 +183,27 @@ export const frontTechnologyCssData = [
     },
     {
         question: "효율적인 CSS를 작성하기 위한 주의점",
-        answer: "간결하고, 재사용 가능하며, 성능에 미치는 영향을 최소화"
+        answer: "중복 제거, 미디어 쿼리 활용, \n클래스 선택자 사용(id는 고유하므로 다른 스타일 규칙과 충돌, 태그 선택자는 너무 일반적)"
     },
     {
         question: "박스 모델에 대한 이해",
-        answer: "HTML요소가 페이지에 어떻게 배치되는지 이해하기 위한 개념\nMargin > Border > Padding > Content"
+        answer: "HTML요소가 화면에 어떻게 배치되는지에 대한 개념\nMargin > Border > Padding > Content로 구성"
     },
     {
-        question: "리셋(resetting)과 정규화(normalizing) CSS의 차이점",
-        answer: "리셋 CSS : 스타일을 완전히 초기화, 제로 상태에서 시작\n정규화 CSS : 기본 스타일을 유지, 브라우저 간의 차이 최소화"
+        question: "리셋(reset)과 정규화(normalizing) CSS의 차이점",
+        answer: "리셋 CSS : 스타일을 완전히 초기화, 제로 상태에서 시작\n정규화 CSS : 기본 스타일을 유지, 브라우저 간의 차이 최소화\n\n리셋 CSS = universal reset\n정규화 CSS = Normalize.css\n\n브라우저 간 스타일 차이 해결이 가장 큰 목적이다.\n일관성이나 스타일 초기화를 위해도 사용 가능"
     },
     {
-        question: "기능이 제한된 브라우저에 페이지를 제공하는 방식",
-        answer: "최신 브라우저는 고급 기능을 활용하고,\n구버전 브라우저에는 기본적인 콘텐츠를 제공\n(폴리필, 브라우저 감지, 그레이스풀 디그레이데이션)"
-    },
-    {
-        question: "시각적으로 컨텐츠를 숨기는 다양한 방법과 이를 스크린 리더기에서만 사용 가능하게 하는 방법",
-        answer: "visibility: hidden, display: none, position: absolute, clip\n\naria-hidden=\"true\" 또는 sr-only 클래스를 사용"
+        question: "시각적으로 컨텐츠를 숨기는 다양한 방법과\n 이를 스크린 리더기(시각 장애)에서만 사용 가능하게 하는 방법",
+        answer: "visibility: hidden, display: none,  opacity: 0\n\nposition: absolute, clip, aria-hidden"
     },
     {
         question: "스크린 외에 다른 @media 속성의 예시",
-        answer: "print : 인쇄용 스타일 적용\nspeech : 화면 리더기와 같은 음성 출력 장치용\nall : 모든 미디어 타입에 공통 적용"
+        answer: "print : 인쇄용 스타일 적용\nspeech : 화면 리더기와 같은 음성 출력 장치용"
     },
     {
         question: "id와 class의 차이점",
-        answer: "id : 한 요소에만 사용, class : 여러 요소에 사용\nid: 식별, class : 그룹화 및 일괄 적용\nid : 우선순위 높음, class : 우선순위 낮음"
+        answer: "id : 유일해야 한다, class : 여러 번 사용 가능\nid : 우선순위 높음, class : 우선순위 낮음"
     },
     {
         question: "스프라이트 이미지(Sprite Image)란?",
@@ -230,7 +226,7 @@ export const frontTechnologyJavascriptData = [
     },
     {
         question: "프로토타입 상속",
-        answer: "자식 객체가 부모 객체의 변수와와 메서드를 상속받는 방식"
+        answer: "자식 객체가 부모 객체의 변수와 메서드를 상속받는 방식"
     },
     {
         question: "이벤트 버블링 정의",
@@ -262,7 +258,7 @@ export const frontTechnologyJavascriptData = [
     },
     {
         question: "this 정의",
-        answer: "함수가 호출되는 방식에 따라 동적으로 결정되며,\n주로 현재 실행 중인 객체나 컨텍스트를 참조"
+        answer: "함수가 호출되는 방식에 따라 동적으로 결정되며,\n주로 현재 실행 중인 객체를 참조"
     },
     {
         question: "가비지 콜렉터 정의와 동작방식",
@@ -282,7 +278,7 @@ export const frontTechnologyJavascriptData = [
     },
     {
         question: "자바스크립트 엔진이 코드를 실행하는 과정",
-        answer: "파싱, 컴파일, 실행 과정을 거쳐 코드를 실행한다.\n파싱 : 코드를 분석하여 추상 구문 트리(AST)로 변환\n컴파일 : AST를 실행 가능한 기계어 코드로 변환\n실행 : 변환된 코드를 실행하며, 실행 컨텍스트와 콜 스택 관리"
+        answer: "파싱, 컴파일, 실행 과정을 거쳐 코드를 실행한다.\n\n파싱 : 코드를 분석하여 구조화된 구문 트리를 생성\n컴파일 : 코드를 기계가 이해할 수 있는 형태로 변환\n실행 : 컴파일된 코드를 실행"
     },
     {
         question: "원시값과 참조값의 차이점을 메모리 관점에서 설명하라",
