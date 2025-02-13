@@ -1,8 +1,8 @@
-import '../css/front.css';
+import '../css/front2.css';
 import { useEffect, useState } from 'react';
 import { frontTechnologyData, frontTechnologyHtmlData, frontTechnologyCssData, frontTechnologyJavascriptData, frontTechnologyReactData, frontTechnologyTypescriptData, frontPortfolioData } from '../data/front_data';
 
-const Front = () => {
+const Front2 = () => {
 
     function randomArray(array) {
         const shuffledArray = [...array]; // 원본 배열 복사
@@ -46,15 +46,15 @@ const Front = () => {
             if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(frontTechnologyTypescriptData));}
         }
         if (categorySelect === 7) {
-            setQuizInfo(frontPortfolioData);setQuizNum(0);
-            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(frontPortfolioData));}
+            setQuizInfo(randomArray(frontPortfolioData));setQuizNum(0);
+            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false); }
         }
     }, [categorySelect, easy])
 
     return(
         <div className='front_container'>
             <div className='front_title_content'>
-                프론트엔드 질문 리스트
+                프론트엔드 질문 리스트asdf
             </div>
             <div className='front_category_container'>
                 <div className='front_category_content'>
@@ -154,4 +154,4 @@ const Front = () => {
     )
 }
 
-export default Front;
+export default Front2;
