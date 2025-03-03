@@ -216,98 +216,98 @@ export const frontTechnologyCssData = [
 ]
 
 export const frontTechnologyJavascriptData = [
-    // {
-    //     question: "클로저(Closure) 정의와 사용방식",
-    //     answer: "함수 내부에 저장된 변수를 외부에서 접근할 수 없지만,\n 클로저를 통해 변수에 접근 및 변경할 수 있도록 도와주는 역할\n\n외부 함수 정의 -> 그 안에 내부 함수 작성 -> \n외부 함수가 종료돼도, 내부 함수는 외부 변수의 참조 유지 ->\n외부 함수는 내부 함수를 반환하여, 외부에서 호출 가능"
-    // },
-    // {
-    //     question: "이벤트 위임 정의와 동작방식",
-    //     answer: "자식 요소가 발생한 이벤트를 부모 요소가 처리\n\n부모 요소에 이벤트 리스너 설정 -> \nevent.target을 통해 자식 요소에서 발생한 이벤트를 확인 -> 부모 요소에서 해당 event를 처리"
-    // },
-    // {
-    //     question: "프로토타입 상속",
-    //     answer: "자식 객체가 부모 객체의 변수와 메서드를 상속받는 방식"
-    // },
-    // {
-    //     question: "이벤트 버블링 정의",
-    //     answer: "자식 요소에 발생한 이벤트를 부모 요소로 전파하여 처리\n자식 요소 출력 -> 부모 요소 출력"
-    // },
-    // {
-    //     question: "이벤트 캡처링 정의",
-    //     answer: "부모 요소에 발생한 이벤트를 자식 요소로 전파하여 처리\n{ capture: true } 사용\n부모 요소 출력 -> 자식 요소 출력"
-    // },
-    // {
-    //     question: "JavaScript에서 동일 출처 정책",
-    //     answer: "보안을 위해 다른 출처의 리소스 접근을 제한한다\n프로토콜, 도메인, 포트가 동일한 출처만 허용한다"
-    // },
-    // {
-    //     question: "동기 및 비동기 함수의 차이",
-    //     answer: "동기 : 작업이 순차적으로 실행, 이전 작업이 완료되어야 한다\n비동기 : 작업이 동시에 실행, 이전 작업 여부와 관계없다"
-    // },
-    // {
-    //     question: "이벤트 루프 정의",
-    //     answer: "비동기 작업을 처리하고 관리\n예) setTimeout()"
-    // },
-    // {
-    //     question: "콜 스택과 태스크 큐의 정의 및 차이점",
-    //     answer: "콜 스택 : 동기적인 함수들이 실행되는 순서\n태스크 큐 : 비동기 함수는 대기, 콜 스택이 비어있으면 실행"
-    // },
-    // {
-    //     question: "실행컨텍스트 정의",
-    //     answer: "코드 실행 및 함수 생성할 때 생성되고, 실행이 끝나면 제거"
-    // },
-    // {
-    //     question: "this 정의",
-    //     answer: "함수가 호출되는 방식에 따라 동적으로 결정되며,\n주로 현재 실행 중인 객체를 참조"
-    // },
-    // {
-    //     question: "가비지 콜렉터 정의와 동작방식",
-    //     answer: "사용되지 않는 메모리를 자동으로 해제하여, 메모리 누수 방지\n\n마크 앤 스윕(참조되지 않는 객체를 찾아서 제거) 방식"
-    // },
-    // {
-    //     question: "Promise 정의와 사용 예시",
-    //     answer: "비동기 작업의 결과를 표현하는 객체\n\n내부 성공 시 : resolve(), 내부 실패 시 : reject(),\n외부 성공 시 : .then, 외부 실패 시 : .catch"
-    // },
-    // {
-    //     question: "async/awiat란?",
-    //     answer: "async : 함수를 비동기 함수로 만들어 Promise를 반환\nawait : Promise가 해결될 때까지 기다리고, 결과를 반환"
-    // },
-    // {
-    //     question: "Javascript는 어떤 언어이고, 어떤 특징이 있나요?",
-    //     answer: "동적이고 비동기적이며, 객체지향을 지원하는 언어\n클라이언트-서버 간의 통신을 처리"
-    // },
-    // {
-    //     question: "자바스크립트 엔진이 코드를 실행하는 과정",
-    //     answer: "파싱, 컴파일, 실행 과정을 거쳐 코드를 실행한다.\n\n파싱 : 코드를 분석하여 구조화된 구문 트리를 생성\n컴파일 : 코드를 기계가 이해할 수 있는 형태로 변환\n실행 : 컴파일된 코드를 실행"
-    // },
-    // {
-    //     question: "원시값과 참조값의 차이점을 메모리 관점에서 설명하라",
-    //     answer: "원시값 : 값 자체가 변수에 저장, 값을 복사하면 서로 독립적\n참조값 : 메모리 주소가 변수에 저장, 값을 복사하면 영향 끼침\n\n원시값 = 숫자, 문자열, boolean\n참조값 = 객체, 배열, 함수"
-    // },
-    // {
-    //     question: "e.target와 e.currentTarget의 차이점",
-    //     answer: "e.target : 이벤트가 발생한 요소 참조\ne.currentTarget : 이벤트가 바인딩된 요소 참조"
-    // },
-    // {
-    //     question: "var, let, const로 생성된 변수의 차이점",
-    //     answer: "var = 재선언 o, 재할당 o \n let = 재선언 x, 재할당 o \n const = 재선언 x, 재할당 x \n(var는 function scope개념 / let, const는 block scope 개념)"
-    // },
-    // {
-    //     question: "Array.forEach() 루프와 Array.map() 메서드의 \n주요한 차이점 및 선택 시점",
-    //     answer: "forEach : 반환값이 없고, 원본 변경 가능, 순수하게 반복 작업\nmap : 반환값이 있고, 원본 변경 불가능, 배열 요소를 반환"
-    // },
-    // {
-    //     question: "Function.call과 Function.apply의 차이점",
-    //     answer: "call : 인수를 ,(쉼표)로 구분하여 전달\n apply : 인수를 [](배열)로 묶어서 전달"
-    // },
-    // {
-    //     question: "Function.prototype.bind 이란?",
-    //     answer: "this 값을 미리 지정하고, 새로운 함수를 만들어주는 메서드"
-    // },
-    // {
-    //     question: "IIFE 정의",
-    //     answer: "정의하자마자 즉시 실행되는 함수 표현식\n\n사용 방법 : (function(){})();"
-    // },
+    {
+        question: "클로저(Closure) 정의와 사용방식",
+        answer: "함수 내부에 저장된 변수를 외부에서 접근할 수 없지만,\n 클로저를 통해 변수에 접근 및 변경할 수 있도록 도와주는 역할\n\n외부 함수 정의 -> 그 안에 내부 함수 작성 -> \n외부 함수가 종료돼도, 내부 함수는 외부 변수의 참조 유지 ->\n외부 함수는 내부 함수를 반환하여, 외부에서 호출 가능"
+    },
+    {
+        question: "이벤트 위임 정의와 동작방식",
+        answer: "자식 요소가 발생한 이벤트를 부모 요소가 처리\n\n부모 요소에 이벤트 리스너 설정 -> \nevent.target을 통해 자식 요소에서 발생한 이벤트를 확인 -> 부모 요소에서 해당 event를 처리"
+    },
+    {
+        question: "프로토타입 상속",
+        answer: "자식 객체가 부모 객체의 변수와 메서드를 상속받는 방식"
+    },
+    {
+        question: "이벤트 버블링 정의",
+        answer: "자식 요소에 발생한 이벤트를 부모 요소로 전파하여 처리\n자식 요소 출력 -> 부모 요소 출력"
+    },
+    {
+        question: "이벤트 캡처링 정의",
+        answer: "부모 요소에 발생한 이벤트를 자식 요소로 전파하여 처리\n{ capture: true } 사용\n부모 요소 출력 -> 자식 요소 출력"
+    },
+    {
+        question: "JavaScript에서 동일 출처 정책",
+        answer: "보안을 위해 다른 출처의 리소스 접근을 제한한다\n프로토콜, 도메인, 포트가 동일한 출처만 허용한다"
+    },
+    {
+        question: "동기 및 비동기 함수의 차이",
+        answer: "동기 : 작업이 순차적으로 실행, 이전 작업이 완료되어야 한다\n비동기 : 작업이 동시에 실행, 이전 작업 여부와 관계없다"
+    },
+    {
+        question: "이벤트 루프 정의",
+        answer: "비동기 작업을 처리하고 관리\n예) setTimeout()"
+    },
+    {
+        question: "콜 스택과 태스크 큐의 정의 및 차이점",
+        answer: "콜 스택 : 동기적인 함수들이 실행되는 순서\n태스크 큐 : 비동기 함수는 대기, 콜 스택이 비어있으면 실행"
+    },
+    {
+        question: "실행컨텍스트 정의",
+        answer: "코드 실행 및 함수 생성할 때 생성되고, 실행이 끝나면 제거"
+    },
+    {
+        question: "this 정의",
+        answer: "함수가 호출되는 방식에 따라 동적으로 결정되며,\n주로 현재 실행 중인 객체를 참조"
+    },
+    {
+        question: "가비지 콜렉터 정의와 동작방식",
+        answer: "사용되지 않는 메모리를 자동으로 해제하여, 메모리 누수 방지\n\n마크 앤 스윕(참조되지 않는 객체를 찾아서 제거) 방식"
+    },
+    {
+        question: "Promise 정의와 사용 예시",
+        answer: "비동기 작업의 결과를 표현하는 객체\n\n내부 성공 시 : resolve(), 내부 실패 시 : reject(),\n외부 성공 시 : .then, 외부 실패 시 : .catch"
+    },
+    {
+        question: "async/awiat란?",
+        answer: "async : 함수를 비동기 함수로 만들어 Promise를 반환\nawait : Promise가 해결될 때까지 기다리고, 결과를 반환"
+    },
+    {
+        question: "Javascript는 어떤 언어이고, 어떤 특징이 있나요?",
+        answer: "동적이고 비동기적이며, 객체지향을 지원하는 언어\n클라이언트-서버 간의 통신을 처리"
+    },
+    {
+        question: "자바스크립트 엔진이 코드를 실행하는 과정",
+        answer: "파싱, 컴파일, 실행 과정을 거쳐 코드를 실행한다.\n\n파싱 : 코드를 분석하여 구조화된 구문 트리를 생성\n컴파일 : 코드를 기계가 이해할 수 있는 형태로 변환\n실행 : 컴파일된 코드를 실행"
+    },
+    {
+        question: "원시값과 참조값의 차이점을 메모리 관점에서 설명하라",
+        answer: "원시값 : 값 자체가 변수에 저장, 값을 복사하면 서로 독립적\n참조값 : 메모리 주소가 변수에 저장, 값을 복사하면 영향 끼침\n\n원시값 = 숫자, 문자열, boolean\n참조값 = 객체, 배열, 함수"
+    },
+    {
+        question: "e.target와 e.currentTarget의 차이점",
+        answer: "e.target : 이벤트가 발생한 요소 참조\ne.currentTarget : 이벤트가 바인딩된 요소 참조"
+    },
+    {
+        question: "var, let, const로 생성된 변수의 차이점",
+        answer: "var = 재선언 o, 재할당 o \n let = 재선언 x, 재할당 o \n const = 재선언 x, 재할당 x \n(var는 function scope개념 / let, const는 block scope 개념)"
+    },
+    {
+        question: "Array.forEach() 루프와 Array.map() 메서드의 \n주요한 차이점 및 선택 시점",
+        answer: "forEach : 반환값이 없고, 원본 변경 가능, 순수하게 반복 작업\nmap : 반환값이 있고, 원본 변경 불가능, 배열 요소를 반환"
+    },
+    {
+        question: "Function.call과 Function.apply의 차이점",
+        answer: "call : 인수를 ,(쉼표)로 구분하여 전달\n apply : 인수를 [](배열)로 묶어서 전달"
+    },
+    {
+        question: "Function.prototype.bind 이란?",
+        answer: "this 값을 미리 지정하고, 새로운 함수를 만들어주는 메서드"
+    },
+    {
+        question: "IIFE 정의",
+        answer: "정의하자마자 즉시 실행되는 함수 표현식\n\n사용 방법 : (function(){})();"
+    },
     {
         question: "Spread Syntax의 정의 및 이점과 주의해야할 점은?",
         answer: "배열을 복사하여 결합하는 역할(...arr)\n\n가독성이 좋고, 코드가 간결하다.\n\n대용량 시 성능 이슈, 얕은 복사만 지원\n\n얕은 복사 : 1차원적인 값만 복사하고, 중첩될 경우 참조만 복사"
@@ -461,7 +461,7 @@ export const frontTechnologyReactData = [
     },
     {
         question: "useRef 정의",
-        answer: "값이 변경되더라도 컴포넌트가 다시 렌더링되지 않고,\nDOM에 직접 접근할 때 사용하는 Hook"
+        answer: "값이 변경되더라도 렌더링 없이 값을 저장하고 참조하는 Hook"
     },
     {
         question: "useState의 useRef 차이점",
