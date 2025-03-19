@@ -1,6 +1,7 @@
 import '../css/front2.css';
 import { useEffect, useState } from 'react';
-import { frontTechnologyData, frontTechnologyHtmlData, frontTechnologyCssData, frontTechnologyJavascriptData, frontTechnologyReactData, frontTechnologyTypescriptData, frontPortfolioData } from '../data/front_data';
+// import { frontTechnologyData, frontTechnologyHtmlData, frontTechnologyCssData, frontTechnologyJavascriptData, frontTechnologyReactData, frontTechnologyTypescriptData, frontPortfolioData } from '../data/front_data';
+import { com, spread } from '../data/com_data';
 
 const Front2 = () => {
 
@@ -22,68 +23,29 @@ const Front2 = () => {
 
     useEffect(() => {
         if (categorySelect === 1) {
-            setQuizInfo((frontTechnologyData));setQuizNum(0);
-            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(frontTechnologyData));}
+            setQuizInfo((com));setQuizNum(0);
+            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(com));}
         }
         if (categorySelect === 2) {
-            setQuizInfo((frontTechnologyHtmlData));setQuizNum(0);
-            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(frontTechnologyHtmlData));}
-        }
-        if (categorySelect === 3) {
-            setQuizInfo((frontTechnologyCssData));setQuizNum(0);
-            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(frontTechnologyCssData));}
-        }
-        if (categorySelect === 4) {
-            setQuizInfo((frontTechnologyJavascriptData));setQuizNum(0);
-            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(frontTechnologyJavascriptData));}
-        }
-        if (categorySelect === 5) {
-            setQuizInfo((frontTechnologyReactData));setQuizNum(0);
-            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(frontTechnologyReactData));}
-        }
-        if (categorySelect === 6) {
-            setQuizInfo((frontTechnologyTypescriptData));setQuizNum(0);
-            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(frontTechnologyTypescriptData));}
-        }
-        if (categorySelect === 7) {
-            setQuizInfo(randomArray(frontPortfolioData));setQuizNum(0);
-            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false); }
+            setQuizInfo((spread));setQuizNum(0);
+            if (easy) { setQuizAnswer(true) } else{ setQuizAnswer(false);setQuizInfo(randomArray(spread));}
         }
     }, [categorySelect, easy])
 
     return(
         <div className='front_container'>
             <div className='front_title_content'>
-                프론트엔드 질문 리스트asdf
+                컴퓨터 활용능력 2급 필기
             </div>
             <div className='front_category_container'>
                 <div className='front_category_content'>
                     <div onClick={() => setCategorySelect(1)} style={{ color: categorySelect === 1 ? '#3578FF' : '', backgroundColor: categorySelect === 1 ? 'white' : '' }} className='front_category'>
-                        front
+                        컴퓨터 일반
                     </div>
                     <div onClick={() => setCategorySelect(2)} style={{ color: categorySelect === 2 ? '#3578FF' : '', backgroundColor: categorySelect === 2 ? 'white' : '' }} className='front_category'>
-                        html
-                    </div>
-                    <div onClick={() => setCategorySelect(3)} style={{ color: categorySelect === 3 ? '#3578FF' : '', backgroundColor: categorySelect === 3 ? 'white' : '' }} className='front_category'>
-                        css
-                    </div>
-                    <div onClick={() => setCategorySelect(4)} style={{ color: categorySelect === 4 ? '#3578FF' : '', backgroundColor: categorySelect === 4 ? 'white' : '' }} className='front_category'>
-                        JavaScript
-                    </div>
-                    <div onClick={() => setCategorySelect(5)} style={{ color: categorySelect === 5 ? '#3578FF' : '', backgroundColor: categorySelect === 5 ? 'white' : '' }} className='front_category'>
-                        React
-                    </div>
-                    <div onClick={() => setCategorySelect(6)} style={{ color: categorySelect === 6 ? '#3578FF' : '', backgroundColor: categorySelect === 6 ? 'white' : '' }} className='front_category'>
-                        TypeScript
-                    </div>
-                    <div onClick={() => setCategorySelect(7)} style={{ color: categorySelect === 7 ? '#3578FF' : '', backgroundColor: categorySelect === 7 ? 'white' : '' }} className='front_category'>
-                        Portfolio
+                        스프레드시트 일반
                     </div>
                 </div>
-            </div>
-            <div className='front_quiz_level_content'>
-                <div onClick={() => setEasy(true)} className='front_quiz_level_easy_content'>EASY</div>
-                <div onClick={() => setEasy(false)} className='front_quiz_level_hard_content'>HARD</div>
             </div>
             <div className='front_quiz_title_container'>
                 <div>{quizInfo.length} / {quizNum+1}</div>
