@@ -30,12 +30,12 @@
     justify-content: center;
     align-items: center;
 }
-.front_category_content{
+.front2_category_content{
     width: 80%;
     height: 70%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
 .front_category{
@@ -65,7 +65,7 @@
 
 
 /* 퀴즈 정보 */
-.front_quiz_info_container{
+.front2_quiz_info_container{
     width: 100%;
     /* height: 75%; */
     height: 60%;
@@ -83,9 +83,9 @@
 }
 
 
-.front_quiz_info_question_container{
-    width: 85%;
-    height: 30%;
+.front2_quiz_info_question_container{
+    width: 90%;
+    height: 20%;
     margin: auto;
 }
 .front_quiz_info_question{
@@ -103,8 +103,8 @@
 
 
 
-.front_quiz_info_line_content{
-    width: 85%;
+.front2_quiz_info_line_content{
+    width: 90%;
     height: 1%;
     margin: auto;
     text-align: center;
@@ -126,12 +126,12 @@
 }
 
 
-.front_quiz_info_answer_container{
-    width: 85%;
-    height: 61%;
+.front2_quiz_info_answer_container{
+    width: 90%;
+    height: 71%;
     margin: auto;
 }
-.front_quiz_info_answer{
+.front2_quiz_info_answer{
     height: 100%;
     margin: auto;
     display: flex;
@@ -140,7 +140,7 @@
     word-wrap: break-word; 
     overflow-wrap: break-word;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
 }
 

@@ -38,7 +38,7 @@ const Front2 = () => {
                 컴퓨터 활용능력 2급 필기
             </div>
             <div className='front_category_container'>
-                <div className='front_category_content'>
+                <div className='front2_category_content'>
                     <div onClick={() => setCategorySelect(1)} style={{ color: categorySelect === 1 ? '#3578FF' : '', backgroundColor: categorySelect === 1 ? 'white' : '' }} className='front_category'>
                         컴퓨터 일반
                     </div>
@@ -51,13 +51,13 @@ const Front2 = () => {
                 <div>{quizInfo.length} / {quizNum+1}</div>
             </div>
 
-            <div className='front_quiz_info_container'>
+            <div className='front2_quiz_info_container'>
 
                 <div className='front_quiz_info_question_title_content'>
                     질문
                 </div>
 
-                <div className='front_quiz_info_question_container'>
+                <div className='front2_quiz_info_question_container'>
                     {quizInfo.length > 0 ? ( 
                         <div style={{ whiteSpace: "pre-line" }} className='front_quiz_info_question'>{quizInfo[quizNum].question}</div> 
                     ) : ( 
@@ -65,7 +65,7 @@ const Front2 = () => {
                     )}
                 </div>
 
-                <div className='front_quiz_info_line_content'>
+                <div className='front2_quiz_info_line_content'>
                     <div className='front_quiz_info_line'></div>
                 </div>
 
@@ -73,9 +73,9 @@ const Front2 = () => {
                         답 
                 </div>
 
-                <div className='front_quiz_info_answer_container'>
+                <div className='front2_quiz_info_answer_container'>
                     {quizInfo.length && quizAnswer > 0 ? ( 
-                        <div style={{ whiteSpace: "pre-line" }} className='front_quiz_info_answer'>{quizInfo[quizNum].answer}</div> 
+                        <div style={{ whiteSpace: "pre-line" }} className='front2_quiz_info_answer'>{quizInfo[quizNum].answer}</div> 
                     ) : ( 
                         <></> 
                     )}
@@ -94,12 +94,12 @@ const Front2 = () => {
                 >
                     이전
                 </div>
-                <div className='front_quiz_select_content'
+                {/* <div className='front_quiz_select_content'
                     onClick={() => setQuizAnswer(true)}
                     style={{color: quizAnswer ? 'rgba(0,0,0,0.2)' : '', border: quizAnswer ? '1.5px solid rgba(0,0,0,0.2)' : ''}}
                 >
                     답 보기
-                </div>
+                </div> */}
                 <div className='front_quiz_select_content' 
                     onClick={() => {
                         setQuizNum((prev) => Math.min(prev + 1, quizInfo.length - 1)); 
